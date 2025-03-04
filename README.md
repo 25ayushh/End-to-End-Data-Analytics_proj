@@ -1,36 +1,36 @@
-**# Python-Retailer-Data-Analysis
+## Python-Retailer-Data-Analysis
 
-## Overview**
+## Overview
 This project is an end-to-end data analysis project utilizing a retailer dataset. The dataset is cleaned using Python, and various SQL queries are created in MySQL to analyze the data and derive meaningful insights.
 
-**## Table of Contents**
+## Table of Contents
 - [Data Cleaning](#data-cleaning)
 - [Data Analysis](#data-analysis)
 - [Queries](#queries)
 - [Results](#results)
 
 
-**## Data Cleaning**
+## Data Cleaning
 The data cleaning process was conducted using Python, involving steps such as:
 - Removing missing values
 - Handling duplicates
 - Normalizing data formats
 - Standardizing column names
 
-**## Data Analysis**
+## Data Analysis
 The analysis involves writing and executing several MySQL queries to gain insights from the cleaned data.
 
-**## Queries
-### Database Setup**
+## Queries
+### Database Setup
 sql
 CREATE DATABASE python_retailer_jyp_nb;
 USE python_retailer_jyp_nb;
 SELECT * FROM retailer_data LIMIT 2;
 
-**Schema Information**
+##Schema Information
 SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'retailer_data';
 
-**Top 10 Highest Revenue Generating Products**
+##Top 10 Highest Revenue Generating Products
 SELECT product_id, ROUND(SUM(sale_price), 2) AS sales
 FROM retailer_data
 GROUP BY product_id
@@ -48,7 +48,7 @@ LIMIT 10;
 
 
 
-**find top 5 highest selling products in each region **
+##find top 5 highest selling products in each region
 select 
 region,
 product_id,
@@ -73,7 +73,7 @@ limit 10;
 
 
 
-**find month over month growth comparison for 2022 and 2023 sales eg : jan 2022 vs jan 2023 **
+##find month over month growth comparison for 2022 and 2023 sales eg : jan 2022 vs jan 2023 
 WITH sales_by_month AS (
 SELECT 
 MONTH(order_date) AS month,
@@ -110,7 +110,7 @@ s2022.month;
 
 ![image](https://github.com/user-attachments/assets/d30bf550-f2ca-442b-b40f-9e18da00e02d)
 
-**for each category which month had highest sales**
+##for each category which month had highest sales
 SELECT category,
 MONTHNAME(order_date) AS month,
 MONTH(order_date) AS monthref,
@@ -136,7 +136,7 @@ limit 100
 
 
 
-**which sub category had highest growth by profit in 2023 compare to 2022**
+##which sub category had highest growth by profit in 2023 compare to 2022
 WITH profit_by_subcategory AS (
 SELECT 
 sub_category,
