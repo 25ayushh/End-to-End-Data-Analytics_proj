@@ -21,7 +21,7 @@ The data cleaning process was conducted using Python, involving steps such as:
 The analysis involves writing and executing several MySQL queries to gain insights from the cleaned data.
 
 ## Queries
-### Database Setup
+## Database Setup
 sql
 CREATE DATABASE python_retailer_jyp_nb;
 USE python_retailer_jyp_nb;
