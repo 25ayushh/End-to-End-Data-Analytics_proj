@@ -36,7 +36,16 @@ FROM retailer_data
 GROUP BY product_id
 ORDER BY sales DESC
 LIMIT 10;
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/1394d2df-7e68-427c-9fb2-25e6147c7b5f)
+
+
+
+
 
 
 **find top 5 highest selling products in each region **
@@ -50,7 +59,18 @@ group by
 region,product_id
 order by sales DESC
 limit 10;
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/4a9bdac6-630b-44a8-aaf3-f41a06ca5beb)
+
+
+
+
+
 
 
 **find month over month growth comparison for 2022 and 2023 sales eg : jan 2022 vs jan 2023 **
@@ -83,6 +103,11 @@ AND
 s2023.year = 2023
 ORDER BY 
 s2022.month;
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/d30bf550-f2ca-442b-b40f-9e18da00e02d)
 
 **for each category which month had highest sales**
@@ -96,9 +121,19 @@ GROUP BY category, month, monthref, year(order_date)
 ORDER BY monthref ASC,year(order_date) ASC, sales DESC
 limit 100
 ;
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/1c9353ae-2c13-4e17-a61d-18ed7ec4672f)
 ![image](https://github.com/user-attachments/assets/66785745-c708-4eb5-83f4-6007ba366787)
 ![image](https://github.com/user-attachments/assets/a271b545-5e5f-4600-8ca4-a4e909b40a10)
+
+
+
+
+
 
 
 **which sub category had highest growth by profit in 2023 compare to 2022**
@@ -131,4 +166,8 @@ sub_category
 ORDER BY 
 growth_percentage DESC
 LIMIT 1;
+
+
+
+
 ![image](https://github.com/user-attachments/assets/5009101b-4a8a-42cf-b16f-4f396b2e2d67)
