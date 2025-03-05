@@ -7,7 +7,6 @@ This project is an end-to-end data analysis project utilizing a retailer dataset
 - [Data Cleaning](#data-cleaning)
 - [Data Analysis](#data-analysis)
 - [Queries](#queries)
-- [Results](#results)
 
 
 ## Data Cleaning
